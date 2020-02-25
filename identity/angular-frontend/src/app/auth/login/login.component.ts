@@ -28,9 +28,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(email: string, password: string) {
-    console.log(email);
-    this.loginPayload.username = email;
+  onSubmit(username: string, password: string) {
+    this.loginPayload.username = username;
     this.loginPayload.password = password;
 
     this.authService.login(this.loginPayload).subscribe(data => {

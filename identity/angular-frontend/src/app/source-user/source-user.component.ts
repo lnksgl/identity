@@ -1,12 +1,15 @@
-import {Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'cdk-drag-drop-connected-sorting-example',
-  templateUrl: 'source-user.component.html',
-  styleUrls: ['source-user.component.css'],
+  selector: 'app-source-user',
+  templateUrl: './source-user.component.html',
+  styleUrls: ['./source-user.component.css']
 })
-export class SourceUserComponent {
+export class SourceUserComponent implements OnInit {
 
-  constructor() {
+  constructor() { }
+
+  ngOnInit() {
   }
+
 }

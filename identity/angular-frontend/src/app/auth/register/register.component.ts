@@ -25,20 +25,18 @@ export class RegisterComponent implements OnInit {
       username: '',
       email: '',
       password: '',
-      confirmPassword: ''
     };
   }
 
   ngOnInit() {
   }
 
-  onSubmit() {
-    this.registerPayload.username = this.registerForm.get('username').value;
-    this.registerPayload.email = this.registerForm.get('email').value;
-    this.registerPayload.password = this.registerForm.get('password').value;
-    this.registerPayload.confirmPassword = this.registerForm.get('confirmPassword').value;
+  onSubmit(username: string, email: string, password: string, confirmPassword: string) {
+    this.registerPayload.username = username;
+    this.registerPayload.email = email;
+    this.registerPayload.password = password;
 
-    if (this.registerPayload.password === this.registerPayload.confirmPassword) {
+    if (this.registerPayload.password === confirmPassword) {
       this.authService.register(this.registerPayload).subscribe(data => {
           this.router.navigateByUrl('v1/login');
         }, error => {

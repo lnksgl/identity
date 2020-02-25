@@ -21,8 +21,9 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {UpdatePostComponent} from './update-post/update-post.component';
 import {MatSelectModule} from '@angular/material/select';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { SourcePostsComponent } from './source-posts/source-posts.component';
+import {SourcePostsComponent} from './source-posts/source-posts.component';
 import {SourceUsersComponent} from './source-users/source-users.component';
+import {SourceUserComponent} from './source-user/source-user.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {SourceUsersComponent} from './source-users/source-users.component';
     PostComponent,
     UpdatePostComponent,
     SourcePostsComponent,
-    SourceUsersComponent
+    SourceUsersComponent,
+    SourceUserComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +55,7 @@ import {SourceUsersComponent} from './source-users/source-users.component';
       {path: 'v1/post', component: AddPostComponent, canActivate: [AuthGuard]},
       {path: 'v1/posts', component: SourcePostsComponent},
       {path: 'v1/users', component: SourceUsersComponent},
+      {path: 'v1/user', component: SourceUserComponent}
     ]),
     HttpClientModule,
     EditorModule,

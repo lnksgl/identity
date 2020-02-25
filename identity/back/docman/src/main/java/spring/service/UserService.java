@@ -41,7 +41,7 @@ public class UserService {
     public List<UserDto> showAllUsers() {
         List<User> users = userRepository.findAll();
         LOG.log(Level.INFO, "show users success");
-        return users.stream().map(this::mapFromUserToDto).collect(toList());
+        return usersStream(users);
     }
 
     @Transactional

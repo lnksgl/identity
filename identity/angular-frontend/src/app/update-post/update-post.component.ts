@@ -15,14 +15,12 @@ export class UpdatePostComponent implements OnInit {
   permaLink: number;
   post: PostPayload;
   title = new FormControl('');
-  category = new FormControl('');
-  body = new FormControl('');
+  content = new FormControl('');
 
   constructor(private activatedRoute: ActivatedRoute, private postService: AddPostService, private router: Router) {
     this.updatePostForm = new FormGroup({
       title: this.title,
-      category: this.category,
-      body: this.body
+      body: this.content
     });
   }
 
@@ -38,10 +36,9 @@ export class UpdatePostComponent implements OnInit {
     });
   }
 
-  updatePost(title: string, category: string, body: string) {
-    this.post.content = body;
+  updatePost(title: string, content: string) {
+    this.post.content = content;
     this.post.title = title;
-    this.post.category = category;
     this.postService.updatePost(this.post).subscribe(data => {
       this.router.navigateByUrl('/');
     }, error => {

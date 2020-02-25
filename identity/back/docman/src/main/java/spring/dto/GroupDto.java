@@ -6,11 +6,9 @@ import lombok.experimental.FieldDefaults;
 
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class PostDto {
+public class GroupDto {
 
     Long id;
+    String name;
     String content;
-    String title;
-    String category;
-    String username;
 }
