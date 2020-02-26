@@ -16,6 +16,6 @@ public interface GroupRepository extends JpaRepository<Group, Long> {
     List<Group> findByName(String name);
 
     @Modifying
-    @Query("update Groups u set u.name = ?1, u.content = ?2 where u.id = ?3")
+    @Query("update Group u set u.name = ?1, u.content = ?2 where u.id = ?3")
     void updateGroup(String name, String content, Long id);
 }

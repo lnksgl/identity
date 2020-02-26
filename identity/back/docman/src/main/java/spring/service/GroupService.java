@@ -3,6 +3,7 @@ package spring.service;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -17,14 +18,15 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-@AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Service
 @Transactional(readOnly = true)
 @CacheConfig(cacheNames = {"service"})
 public class GroupService {
 
+    @Autowired
     GroupRepository groupRepository;
+    @Autowired
     GroupMapper groupMapper;
 
     @Transactional

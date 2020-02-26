@@ -1,4 +1,4 @@
-{
+ {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
@@ -31,7 +31,6 @@
               "src/vendor/animate/animate.css",
               "src/vendor/css-hamburgers/hamburgers.min.css",
               "src/vendor/mdi-font/css/material-design-iconic-font.min.css",
-              "src/vendor/font-awesome-4.7/css/font-awesome.min.css",
               "src/vendor/select2/select2.min.css",
               "src/css/font-awesome.min.css",
               "src/css/util.css",
@@ -41,7 +40,7 @@
               "src/vendor/datepicker/daterangepicker.css",
               "src/css/normalize.min.css",
               "src/css/roboto.css",
-              "https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+              "src/css/devanagari.css"
             ],
             "scripts": []
           },

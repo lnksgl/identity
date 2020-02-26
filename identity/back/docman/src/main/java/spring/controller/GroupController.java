@@ -3,6 +3,7 @@ package spring.controller;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,12 +13,12 @@ import spring.service.GroupService;
 
 import java.util.List;
 
-@AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @RestController
 @RequestMapping("/api/v1/group")
 public class GroupController {
 
+    @Autowired
     GroupService groupService;
 
     @PostMapping

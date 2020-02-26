@@ -4,3 +4,6 @@
 2020-02-25 11:49:31 INFO  AuthService https-jsse-nio-7070-exec-7 - show user-username success
 2020-02-25 11:49:31 INFO  AuthService https-jsse-nio-7070-exec-7 - show user-email success
 2020-02-25 11:49:31 INFO  AuthService https-jsse-nio-7070-exec-7 - signUp 200 OK
+2020-02-25 18:11:41 INFO  AuthService https-jsse-nio-7070-exec-4 - show user-username success
+2020-02-25 18:11:41 INFO  AuthService https-jsse-nio-7070-exec-4 - show user-email success
+2020-02-25 18:11:42 INFO  AuthService https-jsse-nio-7070-exec-4 - signUp 200 OK
