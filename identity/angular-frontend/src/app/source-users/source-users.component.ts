@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
-import {UsersService} from '../users.service';
+import {UsersService} from '../services/users/users.service';
+import {GroupPayload} from '../payloads/group-payload';
+import {SourcePayload} from '../payloads/source-payload';
+import {UserAveragePayload} from '../payloads/user-average-payload';
 
 @Component({
   selector: 'app-source-users',
@@ -9,9 +12,16 @@ import {UsersService} from '../users.service';
 })
 export class SourceUsersComponent implements OnInit {
 
-  page: number = 1;
+  page = 1;
+  user: UserAveragePayload;
+
+  users: Observable<Array<UserAveragePayload>>;
 
   constructor(private userService: UsersService) {
+    this.users = this.userService.getAllUsers();
+    this.users.forEach(data => {
+      console.log(data);
+    });
   }
 
   ngOnInit() {

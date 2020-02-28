@@ -12,16 +12,16 @@ import {RouterModule} from '@angular/router';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {Ng2Webstorage} from 'ngx-webstorage';
 import {HomeComponent} from './home/home.component';
-import {AddPostComponent} from './add-post/add-post.component';
+import {AddGroupComponent} from './add-group/add-group.component';
 import {EditorModule} from '@tinymce/tinymce-angular';
 import {HttpClientInterceptor} from './http-client-interceptor';
-import {PostComponent} from './post/post.component';
+import {GroupComponent} from './post/group.component';
 import {AuthGuard} from './auth.guard';
 import {NgxPaginationModule} from 'ngx-pagination';
-import {UpdatePostComponent} from './update-post/update-post.component';
+import {UpdateGroupComponent} from './update-group/update-group.component';
 import {MatSelectModule} from '@angular/material/select';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {SourcePostsComponent} from './source-posts/source-posts.component';
+import {SourceGroupsComponent} from './source-groups/source-groups.component';
 import {SourceUsersComponent} from './source-users/source-users.component';
 import {SourceUserComponent} from './source-user/source-user.component';
 
@@ -33,10 +33,10 @@ import {SourceUserComponent} from './source-user/source-user.component';
     RegisterSuccessComponent,
     HeaderComponent,
     HomeComponent,
-    AddPostComponent,
-    PostComponent,
-    UpdatePostComponent,
-    SourcePostsComponent,
+    AddGroupComponent,
+    GroupComponent,
+    UpdateGroupComponent,
+    SourceGroupsComponent,
     SourceUsersComponent,
     SourceUserComponent
   ],
@@ -49,11 +49,11 @@ import {SourceUserComponent} from './source-user/source-user.component';
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'v1/register', component: RegisterComponent},
-      {path: 'v1/post/:id', component: PostComponent},
+      {path: 'v1/group/:id', component: GroupComponent},
       {path: 'v1/login', component: LoginComponent},
-      {path: 'v1/get/:id', component: UpdatePostComponent},
-      {path: 'v1/post', component: AddPostComponent, canActivate: [AuthGuard]},
-      {path: 'v1/posts', component: SourcePostsComponent},
+      {path: 'v1/get/:id', component: UpdateGroupComponent},
+      {path: 'v1/group', component: AddGroupComponent, canActivate: [AuthGuard]},
+      {path: 'v1/groups', component: SourceGroupsComponent},
       {path: 'v1/users', component: SourceUsersComponent},
       {path: 'v1/user', component: SourceUserComponent}
     ]),

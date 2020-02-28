@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {AddPostService} from '../add-post.service';
+import {GroupService} from '../services/group/group.service';
 import {Observable} from 'rxjs';
-import {PostPayload} from '../add-post/post-payload';
+import {GroupPayload} from '../payloads/group-payload';
 
 @Component({
   selector: 'app-home',
@@ -11,31 +11,13 @@ import {PostPayload} from '../add-post/post-payload';
 export class HomeComponent implements OnInit {
 
   page: number = 1;
-  post: PostPayload;
+  post: GroupPayload;
 
-  posts: Observable<Array<PostPayload>>;
+  posts: Observable<Array<GroupPayload>>;
 
-  constructor(private postService: AddPostService) {
+  constructor(private groupService: GroupService) {
   }
 
   ngOnInit() {
-    this.posts = this.postService.getUsername();
-  }
-
-  searchTitle(value: string) {
-    if (value === '') {
-      this.ngOnInit();
-
-    } else {
-      this.posts = this.postService.getTitleUsername(value);
-    }
-  }
-
-  searchCategory(value: string) {
-    if (value === undefined) {
-      this.ngOnInit();
-    } else {
-      this.posts = this.postService.getCategory(value);
-    }
   }
 }

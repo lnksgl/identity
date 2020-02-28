@@ -6,11 +6,12 @@
       </div>
 
       <div class="col-md-6" *ngIf="authService.isAuthenticated()">
-        <button class="logout btn btn-default" (click)="logout()">Logout</button>
-        <a href="v1/user" class="login btn btn-default">User</a>
-        <a href="v1/posts" class="login btn btn-default">Posts</a>
+        <a class="logout btn btn-default" (click)="logout()">Logout</a>
+        <a href="v1/user" class="login btn btn-default">Account</a>
+        <a href="v1/groups" class="login btn btn-default">Groups</a>
         <div *ngIf="authService.isAdmin()">
           <a href="v1/post" class="new-post">Add Document</a>
+          <a href="v1/users" class="new-post">Users</a>
         </div>
       </div>
       <div class="col-md-3" *ngIf="!authService.isAuthenticated()">

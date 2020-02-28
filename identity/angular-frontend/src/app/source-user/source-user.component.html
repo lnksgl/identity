@@ -20,7 +20,8 @@
         </div>
 
         <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-          <input class="input100" type="text" id="inputEmail" #email readOnly [formControlName]="'email'" placeholder="Email"
+          <input class="input100" type="text" id="inputEmail" #email readOnly [formControlName]="'email'"
+                 placeholder="Email"
                  value="{{user.email}}">
           <span class="focus-input100"></span>
           <span class="symbol-input100">
@@ -40,7 +41,7 @@
         <div class="wrap-input100 validate-input">
           <input
             style="display: none"
-            type="file" (change)="onFileChanged(fileInput.files[0], username.value, email.value)"
+            type="file" (change)="onFileChanged(fileInput.files[0])"
             #fileInput
             accept=".jpg,.png">
           <button class="login100-form-btn" (click)="fileInput.click()">Select File & Update</button>
@@ -67,8 +68,6 @@
     scale: 1.1
   })
 </script>
-<!--===============================================================================================-->
-<script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
 <script src="src/js/index.js"></script>
 <script src="src/js/tesseract/tesseract.js"></script>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
