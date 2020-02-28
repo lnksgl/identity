@@ -42,7 +42,7 @@ public class GroupService {
     @Cacheable
     public List<GroupDto> showAllGroups() {
         List<Group> groups = groupRepository.findAll();
-        return groupsStream(groups);
+        return groups.stream().map(this::mapFromGroupAverageToDto).collect(toList());
     }
 
     @Transactional
@@ -71,5 +71,14 @@ public class GroupService {
 
     public Group mapFromDtoToGroup(GroupDto group) {
         return groupMapper.dtoToGroup(group);
+    }
+
+    public GroupDto mapFromGroupAverageToDto(Group group) {
+        GroupDto groupDto = new GroupDto();
+        groupDto.setName(group.getName());
+        groupDto.setContent(group.getContent());
+        groupDto.setAverage(group.getAverage());
+
+        return groupDto;
     }
 }

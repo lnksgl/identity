@@ -1,5 +1,6 @@
 export class PostPayload {
   id: string;
-  title: string;
+  name: string;
   content: string;
+  average: string;
 }

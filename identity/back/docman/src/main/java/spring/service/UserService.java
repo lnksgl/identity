@@ -9,7 +9,10 @@ import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import spring.dto.GroupDto;
+import spring.dto.UserAverageDto;
 import spring.dto.UserDto;
+import spring.dto.UserFileDto;
 import spring.exception.PostNotFoundException;
 import spring.mapper.UserMapper;
 import spring.model.User;
@@ -45,6 +48,22 @@ public class UserService {
     }
 
     @Transactional
+    public void updateUser(UserAverageDto userAverageDto) {
+        userRepository.updateUser(avg(userAverageDto.getAverage()), userAverageDto.getId());
+    }
+
+    public String avg(String average) {
+        String[] strMas = average.replaceAll("[^\\d.]", "").split("");
+        int sum = 0;
+
+        for (int i = 0; i < strMas.length; i++) {
+            sum += Integer.decode(strMas[i]);
+        }
+
+        return String.valueOf(sum / strMas.length);
+    }
+
+    @Transactional
     public void deleteUser(long id) {
        userRepository.delete(userRepository.findById(id).orElseThrow(() -> new PostNotFoundException("For id " + id)));
         LOG.log(Level.INFO, "delete user success");
@@ -55,6 +74,12 @@ public class UserService {
         User user = userRepository.findById(id).orElseThrow(() -> new PostNotFoundException("For id " + id));
         LOG.log(Level.INFO, "read single user success");
         return mapFromUserToDto(user);
+    }
+
+    @Cacheable
+    public UserAverageDto readCurrentUser(String username) {
+        User user = userRepository.findByUsername(username).orElseThrow(() -> new PostNotFoundException("For id " + username));
+        return mapFromUserToAverageDto(user);
     }
 
     public boolean checkUsername(String username, String email) {
@@ -83,5 +108,15 @@ public class UserService {
 
     public User mapFromDtoToUser(UserDto user) {
         return userMapper.dtoToUser(user);
+    }
+
+    public UserAverageDto mapFromUserToAverageDto(User user) {
+        UserAverageDto userAverageDto = new UserAverageDto();
+        userAverageDto.setId(user.getId());
+        userAverageDto.setUsername(user.getUsername());
+        userAverageDto.setEmail(user.getEmail());
+        userAverageDto.setAverage(user.getScanDocument());
+
+        return userAverageDto;
     }
 }

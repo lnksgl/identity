@@ -1,16 +1,18 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {PostPayload} from './add-post/post-payload';
 import {Observable, of} from 'rxjs';
 import {LocalStorageService} from 'ngx-webstorage';
+import {SourcePayload} from './source-posts/source-payload';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AddPostService {
-  private url = 'https://localhost:7070/api/v1/posts';
+  private url = 'https://localhost:7070/api/v1/group';
 
-  constructor(private httpClient: HttpClient, private localStorageService: LocalStorageService) { }
+  constructor(private httpClient: HttpClient, private localStorageService: LocalStorageService) {
+  }
 
   addPost(postPayload: PostPayload): Observable<any> {
     return this.httpClient.post(this.url, postPayload);
@@ -45,6 +47,10 @@ export class AddPostService {
   }
 
   getTitleUsername(title: string): Observable<Array<PostPayload>> {
-  return this.httpClient.put<Array<PostPayload>>(this.url + '/' + title + '?' + this.localStorageService.retrieve('username'), '');
-}
+    return this.httpClient.put<Array<PostPayload>>(this.url + '/' + title + '?' + this.localStorageService.retrieve('username'), '');
+  }
+
+  createEnquiry(enquiry: SourcePayload): Observable<any> {
+    return this.httpClient.post('https://localhost:7070/api/v1/enquiry', enquiry);
+  }
 }

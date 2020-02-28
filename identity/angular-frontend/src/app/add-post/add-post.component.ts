@@ -13,27 +13,28 @@ export class AddPostComponent implements OnInit {
 
   addPostForm: FormGroup;
   postPayload: PostPayload;
-  title = new FormControl('');
+  name = new FormControl('');
   content = new FormControl('');
 
   constructor(private addPostService: AddPostService, private router: Router) {
     this.addPostForm = new FormGroup({
-      title: this.title,
+      name: this.name,
       content: this.content
     });
     this.postPayload = {
       id: '',
-      title: '',
-      content: ''
+      name: '',
+      content: '',
+      average: ''
     };
   }
 
   ngOnInit() {
   }
 
-  addPost(title: string, body: string) {
-    this.postPayload.content = body;
-    this.postPayload.title = title;
+  addPost(name: string, content: string) {
+    this.postPayload.name = name;
+    this.postPayload.content = content;
     this.addPostService.addPost(this.postPayload).subscribe(data => {
       this.router.navigateByUrl('');
     }, error => {

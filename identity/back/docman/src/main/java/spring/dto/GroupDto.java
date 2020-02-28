@@ -11,4 +11,5 @@ public class GroupDto {
     Long id;
     String name;
     String content;
+    String average;
 }

@@ -5,13 +5,14 @@
         <img src="assets/images/img-01.png" alt="IMG">
       </div>
 
-      <form class="login100-form validate-form" [formGroup]="registerForm" (ngSubmit)="onSubmit(username.value, email.value, password.value, confirm.value)">
+      <form class="login100-form validate-form" [formGroup]="userForm">
 					<span class="login100-form-title">
-						Member Sign Up
+						Manage your Account
           </span>
 
         <div class="wrap-input100 validate-input">
-          <input class="input100" type="text" id="inputUsername" #username [formControlName]="'username'" placeholder="Username">
+          <input class="input100" type="text" id="inputUsername" #username readOnly [formControlName]="'username'"
+                 placeholder="Username" value="{{user.username}}">
           <span class="focus-input100"></span>
           <span class="symbol-input100">
 							<i class="fa fa-drupal" aria-hidden="true"></i>
@@ -19,23 +20,30 @@
         </div>
 
         <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-          <input class="input100" type="text" id="inputEmail" #email [formControlName]="'email'" placeholder="Email">
+          <input class="input100" type="text" id="inputEmail" #email readOnly [formControlName]="'email'" placeholder="Email"
+                 value="{{user.email}}">
           <span class="focus-input100"></span>
           <span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 					</span>
         </div>
 
-        <div id="take" class="container-login100-form-btn">
-          <button class="login100-form-btn">
-            Sign Up
-          </button>
+        <div class="wrap-input100 validate-input">
+          <input class="input100" type="text" id="inputAverage" #average readOnly [formControlName]="'average'"
+                 placeholder="Average" value="{{user.average}}">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<i class="fa fa-chart-bar" aria-hidden="true"></i>
+					</span>
         </div>
 
-        <div class="text-center p-t-12">
-          <a class="txt2" href="v1/login">
-            Login your Account
-          </a>
+        <div class="wrap-input100 validate-input">
+          <input
+            style="display: none"
+            type="file" (change)="onFileChanged(fileInput.files[0], username.value, email.value)"
+            #fileInput
+            accept=".jpg,.png">
+          <button class="login100-form-btn" (click)="fileInput.click()">Select File & Update</button>
         </div>
 
         <br><br><br><br><br>
@@ -60,5 +68,7 @@
   })
 </script>
 <!--===============================================================================================-->
+<script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
 <script src="src/js/index.js"></script>
+<script src="src/js/tesseract/tesseract.js"></script>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>

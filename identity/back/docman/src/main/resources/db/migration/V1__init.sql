@@ -14,14 +14,14 @@ create table groups (
     id int8 not null,
     name varchar(255) not null,
     content text not null,
+    average varchar(255) default '0',
     primary key (id)
 );
 
 create table enquiry (
 	id int8 not null,
-	description int not null,
-	idUsers int not null,
-	idGroups int not null,
+	idUsers int8 not null,
+	idGroups int8 not null,
 	constraint enquiry_users_id_fk FOREIGN KEY (idUsers) references users (id),
 	constraint enquiry_groups_id_fk FOREIGN KEY (idGroups) references groups (id)
 );

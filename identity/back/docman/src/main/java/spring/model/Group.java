@@ -27,4 +27,6 @@ public class Group {
     @Column
     @NonNull
     String content;
+    @Column
+    String average;
 }

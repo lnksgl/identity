@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
 import {UsersService} from '../users.service';
-import {UserPayload} from './user-payload';
 
 @Component({
   selector: 'app-source-users',
@@ -11,15 +10,11 @@ import {UserPayload} from './user-payload';
 export class SourceUsersComponent implements OnInit {
 
   page: number = 1;
-  user: UserPayload;
-
-  users: Observable<Array<UserPayload>>;
 
   constructor(private userService: UsersService) {
   }
 
   ngOnInit() {
-    this.users = this.userService.getAllUsers();
   }
 
   deleteUser(id) {
@@ -27,10 +22,5 @@ export class SourceUsersComponent implements OnInit {
   }
 
   searchUser(value: string) {
-    if (value === '') {
-      this.ngOnInit();
-    } else {
-      this.users = this.userService.getUsername(value);
-    }
   }
 }

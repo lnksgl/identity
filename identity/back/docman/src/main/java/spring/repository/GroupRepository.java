@@ -18,4 +18,8 @@ public interface GroupRepository extends JpaRepository<Group, Long> {
     @Modifying
     @Query("update Group u set u.name = ?1, u.content = ?2 where u.id = ?3")
     void updateGroup(String name, String content, Long id);
+
+    @Modifying
+    @Query("update Group u set u.average = ?1 where u.id = ?2")
+    void updateGroup(String average, Long id);
 }

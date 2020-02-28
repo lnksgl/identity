@@ -4,7 +4,7 @@
       <h3 class="new-post-title">Update Post</h3>
     </div>
     <hr>
-    <form [formGroup]="updatePostForm" (ngSubmit)="updatePost(title.value, updatePostForm.get('body').value)">
+    <form [formGroup]="updatePostForm" (ngSubmit)="updatePost(title.value, updatePostForm.get('context').value)">
       <div class="form-group">
         <label class="post-title">Title</label>
         <input type="text" name="title" #title [formControlName]="'title'" class="form-control" placeholder="Title" value="{{post.title}}">
