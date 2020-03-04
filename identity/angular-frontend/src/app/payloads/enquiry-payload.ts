@@ -1,4 +1,4 @@
-export class SourcePayload {
+export class EnquiryPayload {
   username: string;
   name: string;
 }

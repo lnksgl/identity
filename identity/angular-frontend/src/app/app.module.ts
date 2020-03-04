@@ -15,7 +15,7 @@ import {HomeComponent} from './home/home.component';
 import {AddGroupComponent} from './add-group/add-group.component';
 import {EditorModule} from '@tinymce/tinymce-angular';
 import {HttpClientInterceptor} from './http-client-interceptor';
-import {GroupComponent} from './post/group.component';
+import {GroupComponent} from './group/group.component';
 import {AuthGuard} from './auth.guard';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {UpdateGroupComponent} from './update-group/update-group.component';

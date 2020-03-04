@@ -7,6 +7,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.time.Instant;
 
 @Entity
 @Table(name="enquiry")
@@ -23,4 +24,6 @@ public class Enquiry {
     Long idUsers;
     @Column(name="idgroups")
     Long idGroups;
+    @Column(name="createdon")
+    Instant createdOn;
 }

@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {UsersService} from '../services/users/users.service';
-import {GroupPayload} from '../payloads/group-payload';
-import {SourcePayload} from '../payloads/source-payload';
 import {UserAveragePayload} from '../payloads/user-average-payload';
 
 @Component({

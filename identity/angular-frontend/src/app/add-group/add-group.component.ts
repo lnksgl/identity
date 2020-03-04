@@ -41,8 +41,4 @@ export class AddGroupComponent implements OnInit {
       console.log('Failure Response');
     });
   }
-
-  assertValidate(title: string, category: string, body: string) {
-    return !(title != '' && category != '' && body != '');
-  }
 }

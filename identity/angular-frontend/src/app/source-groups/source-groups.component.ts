@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {GroupPayload} from '../payloads/group-payload';
 import {Observable} from 'rxjs';
 import {GroupService} from '../services/group/group.service';
-import {SourcePayload} from '../payloads/source-payload';
+import {EnquiryPayload} from '../payloads/enquiry-payload';
 import {LocalStorageService} from 'ngx-webstorage';
 import {Router} from '@angular/router';
 import {EnquiryService} from '../services/enquiry/enquiry.service';
@@ -16,7 +16,7 @@ export class SourceGroupsComponent implements OnInit {
 
   page = 1;
   group: GroupPayload;
-  enquiry: SourcePayload;
+  enquiry: EnquiryPayload;
 
   groups: Observable<Array<GroupPayload>>;
 

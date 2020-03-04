@@ -1,16 +1,18 @@
 package spring.math;
 
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 import spring.model.Enquiry;
-import spring.service.UserService;
+import spring.repository.UserRepository;
 
 import java.util.Arrays;
 import java.util.List;
 
 @AllArgsConstructor
+@Component
 public class MathOperations {
 
-    UserService userService;
+    UserRepository userRepository;
 
     public double minEvaluation(List<Enquiry> enquiryList) {
         double[] evaluations = new double[enquiryList.size()];
@@ -25,7 +27,7 @@ public class MathOperations {
     }
 
     public double parseEvaluation(Long id) {
-        return Double.parseDouble(userService.readSingleUser(id).getScanDocument());
+        return Double.parseDouble(userRepository.findById(id).get().getScanDocument());
     }
 
     public double average(String[] evaluations) {

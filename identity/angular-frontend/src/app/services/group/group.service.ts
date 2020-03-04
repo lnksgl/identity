@@ -1,9 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {GroupPayload} from '../../payloads/group-payload';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {LocalStorageService} from 'ngx-webstorage';
-import {SourcePayload} from '../../payloads/source-payload';
 
 @Injectable({
   providedIn: 'root'

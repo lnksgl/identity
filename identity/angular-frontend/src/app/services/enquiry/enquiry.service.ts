@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {SourcePayload} from '../../payloads/source-payload';
+import {EnquiryPayload} from '../../payloads/enquiry-payload';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class EnquiryService {
 
   constructor(private httpClient: HttpClient) { }
 
-  createEnquiry(enquiry: SourcePayload): Observable<any> {
+  createEnquiry(enquiry: EnquiryPayload): Observable<any> {
     return this.httpClient.post(this.url, enquiry);
   }
 

@@ -16,6 +16,7 @@ import spring.math.MathOperations;
 import spring.model.Enquiry;
 import spring.repository.EnquiryRepository;
 
+import java.time.Instant;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
@@ -29,6 +30,7 @@ public class EnquiryService {
 
     EnquiryRepository enquiryRepository;
     GroupService groupService;
+    UserService userService;
     EnquiryMapper enquiryMapper;
     MathOperations mathOperations;
 
@@ -69,7 +71,12 @@ public class EnquiryService {
     }
 
     public Enquiry mapFromDtoToEnquiry(EnquiryDto enquiryDto) {
-        return enquiryMapper.dtoToEnquiry(enquiryDto);
+        Enquiry enquiry = new Enquiry();
+        enquiry.setIdUsers(userService.showUsername(enquiryDto.getUsername()).get(0).getId());
+        enquiry.setIdGroups(groupService.showNameGroup(enquiryDto.getName()).get(0).getId());
+        enquiry.setCreatedOn(Instant.now());
+
+        return enquiry;
     }
 
     public EnquiryDto mapFromEnquiryToDto(Enquiry enquiry) {
