@@ -375,3 +375,117 @@ Consider defining a bean of type 'spring.user.UserMapper' in your configuration.
 2020-03-04 15:23:00.099  INFO 28609 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-03-04 15:23:00.102  INFO 28609 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-03-04 15:23:00.121  INFO 28609 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-04 15:49:19.963  INFO 6052 --- [main] spring.IdentityApplication               : The following profiles are active: native
+2020-03-04 15:49:20.564  INFO 6052 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-04 15:49:20.626  INFO 6052 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 3 JPA repository interfaces.
+2020-03-04 15:49:20.722  WARN 6052 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-03-04 15:49:20.878  INFO 6052 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ba0657f7-6d3c-3b9e-9d4a-7be3f72f06d6
+2020-03-04 15:49:21.040  INFO 6052 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 15:49:21.333  INFO 6052 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (https)
+2020-03-04 15:49:21.350  INFO 6052 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-04 15:49:21.350  INFO 6052 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-04 15:49:21.437  INFO 6052 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-04 15:49:21.438  INFO 6052 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1460 ms
+2020-03-04 15:49:21.527  WARN 6052 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-04 15:49:21.528  INFO 6052 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-04 15:49:21.537  INFO 6052 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7d47dfed
+2020-03-04 15:49:21.584  WARN 6052 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 15:49:21.754  INFO 6052 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-04 15:49:21.797  INFO 6052 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-03-04 15:49:21.891  INFO 6052 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-04 15:49:21.960  INFO 6052 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-04 15:49:22.095  INFO 6052 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-04 15:49:22.112  INFO 6052 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-03-04 15:49:22.697  INFO 6052 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-04 15:49:22.702  INFO 6052 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 15:49:23.500  INFO 6052 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2020-03-04 15:49:23.704  INFO 6052 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@383a5260, org.springframework.security.web.context.SecurityContextPersistenceFilter@edf4973, org.springframework.security.web.header.HeaderWriterFilter@2396dc4e, org.springframework.security.web.authentication.logout.LogoutFilter@7ec729be, spring.jwt.JwtAuthenticationFilter@49616310, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e68ccc9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7fb28ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4986b0ea, org.springframework.security.web.session.SessionManagementFilter@63d43a5, org.springframework.security.web.access.ExceptionTranslationFilter@63e81ac6]
+2020-03-04 15:49:23.865  WARN 6052 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-04 15:49:23.866  INFO 6052 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-04 15:49:24.282  INFO 6052 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2020-03-04 15:49:24.285  INFO 6052 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
+2020-03-04 15:49:24.506  INFO 6052 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (https) with context path ''
+2020-03-04 15:49:24.565  INFO 6052 --- [main] spring.IdentityApplication               : Started IdentityApplication in 5.256 seconds (JVM running for 5.619)
+2020-03-04 15:49:36.719  INFO 6052 --- [SpringContextShutdownHook] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2020-03-04 15:49:36.730  INFO 6052 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 15:49:36.733  INFO 6052 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-04 15:49:36.741  INFO 6052 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-04 15:57:45.035  INFO 8662 --- [main] spring.IdentityApplication               : The following profiles are active: native
+2020-03-04 15:57:45.636  INFO 8662 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-04 15:57:45.700  INFO 8662 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 3 JPA repository interfaces.
+2020-03-04 15:57:45.794  WARN 8662 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-03-04 15:57:45.951  INFO 8662 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ba0657f7-6d3c-3b9e-9d4a-7be3f72f06d6
+2020-03-04 15:57:46.119  INFO 8662 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 15:57:46.413  INFO 8662 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (https)
+2020-03-04 15:57:46.429  INFO 8662 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-04 15:57:46.429  INFO 8662 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-04 15:57:46.514  INFO 8662 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-04 15:57:46.514  INFO 8662 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1463 ms
+2020-03-04 15:57:46.599  WARN 8662 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-04 15:57:46.599  INFO 8662 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-04 15:57:46.608  INFO 8662 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@35ac9ebd
+2020-03-04 15:57:46.654  WARN 8662 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 15:57:46.809  INFO 8662 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-04 15:57:46.853  INFO 8662 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-03-04 15:57:46.946  INFO 8662 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-04 15:57:47.018  INFO 8662 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-04 15:57:47.161  INFO 8662 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-04 15:57:47.179  INFO 8662 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-03-04 15:57:47.738  INFO 8662 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-04 15:57:47.742  INFO 8662 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 15:57:48.502  INFO 8662 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2020-03-04 15:57:48.724  INFO 8662 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5481f204, org.springframework.security.web.context.SecurityContextPersistenceFilter@257da215, org.springframework.security.web.header.HeaderWriterFilter@5101b9, org.springframework.security.web.authentication.logout.LogoutFilter@277dddcf, spring.jwt.JwtAuthenticationFilter@56bf6f1e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f3e6876, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21f421b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@171b0d3, org.springframework.security.web.session.SessionManagementFilter@3816efab, org.springframework.security.web.access.ExceptionTranslationFilter@533690d]
+2020-03-04 15:57:48.867  WARN 8662 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-04 15:57:48.867  INFO 8662 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-04 15:57:49.258  INFO 8662 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2020-03-04 15:57:49.262  INFO 8662 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
+2020-03-04 15:57:49.446  INFO 8662 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (https) with context path ''
+2020-03-04 15:57:49.503  INFO 8662 --- [main] spring.IdentityApplication               : Started IdentityApplication in 5.096 seconds (JVM running for 5.446)
+2020-03-04 15:57:54.289  INFO 8662 --- [SpringContextShutdownHook] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2020-03-04 15:57:54.328  INFO 8662 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 15:57:54.332  INFO 8662 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-04 15:57:54.339  INFO 8662 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-04 16:54:52.571  INFO 25125 --- [main] spring.IdentityApplication               : The following profiles are active: native
+2020-03-04 16:54:53.180  INFO 25125 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-04 16:54:53.241  INFO 25125 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 3 JPA repository interfaces.
+2020-03-04 16:54:53.332  WARN 25125 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-03-04 16:54:53.472  INFO 25125 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ba0657f7-6d3c-3b9e-9d4a-7be3f72f06d6
+2020-03-04 16:54:53.641  INFO 25125 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 16:54:53.934  INFO 25125 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (https)
+2020-03-04 16:54:53.950  INFO 25125 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-04 16:54:53.951  INFO 25125 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-04 16:54:54.038  INFO 25125 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-04 16:54:54.038  INFO 25125 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1446 ms
+2020-03-04 16:54:54.128  WARN 25125 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-04 16:54:54.129  INFO 25125 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-04 16:54:54.138  INFO 25125 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3719360c
+2020-03-04 16:54:54.188  WARN 25125 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 16:54:54.335  INFO 25125 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-04 16:54:54.378  INFO 25125 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-03-04 16:54:54.469  INFO 25125 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-04 16:54:54.538  INFO 25125 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-04 16:54:54.682  INFO 25125 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-04 16:54:54.699  INFO 25125 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-03-04 16:54:55.259  INFO 25125 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-04 16:54:55.263  INFO 25125 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 16:54:56.060  INFO 25125 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2020-03-04 16:54:56.247  INFO 25125 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@159314ca, org.springframework.security.web.context.SecurityContextPersistenceFilter@130ad58d, org.springframework.security.web.header.HeaderWriterFilter@401b7226, org.springframework.security.web.authentication.logout.LogoutFilter@110f66e3, spring.jwt.JwtAuthenticationFilter@756030e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@383a5260, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@751526a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bafc754, org.springframework.security.web.session.SessionManagementFilter@76055d02, org.springframework.security.web.access.ExceptionTranslationFilter@26398f67]
+2020-03-04 16:54:56.381  WARN 25125 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-04 16:54:56.381  INFO 25125 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-04 16:54:56.797  INFO 25125 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2020-03-04 16:54:56.800  INFO 25125 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
+2020-03-04 16:54:57.009  INFO 25125 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (https) with context path ''
+2020-03-04 16:54:57.066  INFO 25125 --- [main] spring.IdentityApplication               : Started IdentityApplication in 5.124 seconds (JVM running for 5.51)
+2020-03-04 16:55:11.900  INFO 25125 --- [https-jsse-nio-7070-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-04 16:55:11.900  INFO 25125 --- [https-jsse-nio-7070-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-04 16:55:11.907  INFO 25125 --- [https-jsse-nio-7070-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-03-04 16:55:11.921  WARN 25125 --- [https-jsse-nio-7070-exec-7] o.s.c.n.zuul.web.ZuulHandlerMapping      : No routes found from RouteLocator
+2020-03-04 17:07:09.571  WARN 25125 --- [https-jsse-nio-7070-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /user
+2020-03-04 17:07:21.132  WARN 25125 --- [https-jsse-nio-7070-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /v1/api/user
+2020-03-04 17:07:44.941  WARN 25125 --- [https-jsse-nio-7070-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /v1/api/user/3
+2020-03-04 17:08:07.418  WARN 25125 --- [https-jsse-nio-7070-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /v1/api/user/username/admin
+2020-03-04 17:09:09.932  WARN 25125 --- [https-jsse-nio-7070-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /v1/api/user
+2020-03-04 17:20:04.361  INFO 25125 --- [SpringContextShutdownHook] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2020-03-04 17:20:04.388  INFO 25125 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 17:20:04.391  INFO 25125 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-04 17:20:04.400  INFO 25125 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

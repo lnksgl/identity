@@ -102,8 +102,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Docman/docmangradle" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.6758621" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -177,8 +177,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.docmangradle [// https://mvnrepository.com/artifact/log4j/log4j compile group: 'log4j', name: 'log4j', version: '1.2.17']" />
       <item itemvalue="Application.IdentityApplication" />
+      <item itemvalue="Gradle.docmangradle [// https://mvnrepository.com/artifact/log4j/log4j compile group: 'log4j', name: 'log4j', version: '1.2.17']" />
     </list>
     <recent_temporary>
       <list>
@@ -236,26 +236,26 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="746" y="439" width="494" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/67.27.1853.1053@67.27.1853.1053" timestamp="1583324042608" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583324606693">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583325038767">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1583324606693" />
-    <state width="1807" height="266" key="GridCell.Tab.0.bottom" timestamp="1583324691017">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1583325038767" />
+    <state width="1807" height="547" key="GridCell.Tab.0.bottom" timestamp="1583331605306">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="266" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583324691017" />
-    <state width="1807" height="266" key="GridCell.Tab.0.center" timestamp="1583324691015">
+    <state width="1807" height="547" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583331605306" />
+    <state width="1807" height="547" key="GridCell.Tab.0.center" timestamp="1583331605306">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="266" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583324691015" />
-    <state width="1807" height="266" key="GridCell.Tab.0.left" timestamp="1583324691014">
+    <state width="1807" height="547" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583331605306" />
+    <state width="1807" height="547" key="GridCell.Tab.0.left" timestamp="1583331605306">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="266" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583324691014" />
-    <state width="1807" height="266" key="GridCell.Tab.0.right" timestamp="1583324691016">
+    <state width="1807" height="547" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583331605306" />
+    <state width="1807" height="547" key="GridCell.Tab.0.right" timestamp="1583331605306">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="266" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583324691016" />
+    <state width="1807" height="547" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583331605306" />
     <state width="1807" height="328" key="GridCell.Tab.1.bottom" timestamp="1581332221243">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -276,10 +276,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/67.27.1853.1053@67.27.1853.1053" timestamp="1580811465785" />
-    <state x="634" y="101" width="1024" height="845" key="SettingsEditor" timestamp="1583324632207">
+    <state x="634" y="101" width="1024" height="845" key="SettingsEditor" timestamp="1583329753390">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="634" y="101" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1583324632207" />
+    <state x="634" y="101" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1583329753390" />
     <state x="657" y="253" width="672" height="677" key="run.anything.popup" timestamp="1583321645684">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
