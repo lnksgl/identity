@@ -26,7 +26,7 @@ public class EnquiryMathOperations {
     }
 
     public double parseEvaluation(Long id) {
-        return Double.parseDouble(userRepository.findById(id).get().getScanDocument());
+        return 0;//Double.parseDouble(userRepository.findById(id).get().getScanDocument());
     }
 
     public double average(String[] evaluations) {

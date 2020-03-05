@@ -57,6 +57,19 @@
                 <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="back-gradle" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="back-gradle" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -70,6 +83,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -87,6 +103,7 @@
     <option name="delegateBuildToMaven" value="true" />
   </component>
   <component name="ProjectId" id="1XL3BwSnYJBMzKXdvsN37SKgEpr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -100,14 +117,15 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/spring-boot-starter-data-r2dbc-0.1.0.M1.jar!/" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.6758621" />
+    <property name="project.structure.side.proportion" value="0.5494253" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -119,6 +137,9 @@
       <recent name="$PROJECT_DIR$/src/test/java" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/main/java/spring" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libs" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -211,6 +232,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
     <state x="650" y="197" width="676" height="710" key="#IdentityApplication" timestamp="1583324465347">
       <screen x="67" y="27" width="1853" height="1053" />
@@ -224,10 +250,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="1034" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583324480864" />
-    <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1583323775890">
+    <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1583417668140">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1583323775890" />
+    <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1583417668140" />
     <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583321988304">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -236,26 +262,26 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="746" y="439" width="494" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/67.27.1853.1053@67.27.1853.1053" timestamp="1583324042608" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583325038767">
+    <state x="776" y="310" width="735" height="484" key="FileChooserDialogImpl" timestamp="1583419971179">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1583325038767" />
-    <state width="1807" height="547" key="GridCell.Tab.0.bottom" timestamp="1583331605306">
+    <state x="776" y="310" width="735" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1583419971179" />
+    <state width="1807" height="2" key="GridCell.Tab.0.bottom" timestamp="1583421269113">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="547" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583331605306" />
-    <state width="1807" height="547" key="GridCell.Tab.0.center" timestamp="1583331605306">
+    <state width="1807" height="2" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583421269113" />
+    <state width="1807" height="2" key="GridCell.Tab.0.center" timestamp="1583421269111">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="547" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583331605306" />
-    <state width="1807" height="547" key="GridCell.Tab.0.left" timestamp="1583331605306">
+    <state width="1807" height="2" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583421269111" />
+    <state width="1807" height="2" key="GridCell.Tab.0.left" timestamp="1583421269110">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="547" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583331605306" />
-    <state width="1807" height="547" key="GridCell.Tab.0.right" timestamp="1583331605306">
+    <state width="1807" height="2" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583421269110" />
+    <state width="1807" height="2" key="GridCell.Tab.0.right" timestamp="1583421269112">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="547" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583331605306" />
+    <state width="1807" height="2" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583421269112" />
     <state width="1807" height="328" key="GridCell.Tab.1.bottom" timestamp="1581332221243">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -276,13 +302,13 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/67.27.1853.1053@67.27.1853.1053" timestamp="1580811465785" />
-    <state x="634" y="101" width="1024" height="845" key="SettingsEditor" timestamp="1583329753390">
+    <state x="565" y="235" width="1024" height="845" key="SettingsEditor" timestamp="1583420254751">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="634" y="101" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1583329753390" />
-    <state x="657" y="253" width="672" height="677" key="run.anything.popup" timestamp="1583321645684">
+    <state x="565" y="235" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1583420254751" />
+    <state x="657" y="253" width="672" height="677" key="run.anything.popup" timestamp="1583419893673">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="657" y="253" width="672" height="677" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1583321645684" />
+    <state x="657" y="253" width="672" height="677" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1583419893673" />
   </component>
 </project>

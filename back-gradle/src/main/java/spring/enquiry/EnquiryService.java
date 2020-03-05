@@ -66,7 +66,7 @@ public class EnquiryService {
 
     public Enquiry mapFromDtoToEnquiry(EnquiryDto enquiryDto) {
         Enquiry enquiry = new Enquiry();
-        enquiry.setIdUsers(userService.showUsername(enquiryDto.getUsername()).get(0).getId());
+        enquiry.setIdUsers(userService.showUsername(enquiryDto.getUsername()).getId());
         enquiry.setIdGroups(groupService.showNameGroup(enquiryDto.getName()).get(0).getId());
         enquiry.setCreatedOn(Instant.now());
 

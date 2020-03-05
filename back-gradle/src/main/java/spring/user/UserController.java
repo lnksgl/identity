@@ -6,9 +6,8 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import spring.group.GroupDto;
-
-import java.util.List;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -19,8 +18,8 @@ public class UserController {
     UserService userService;
 
     @GetMapping
-    public ResponseEntity<List<UserAverageDto>> showAllUsers() {
-        return new ResponseEntity<>(userService.showAllUsers(), HttpStatus.OK);
+    public Flux<UserAverageDto> showAllUsers() {
+        return Flux.fromIterable(userService.showAllUsers());
     }
 
     @DeleteMapping("/{id}")
@@ -30,18 +29,18 @@ public class UserController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<GroupDto> getSingleUser(@PathVariable Long id) {
-        return new ResponseEntity(userService.mapFromUserToDto(userService.readSingleUser(id)), HttpStatus.OK);
+    public Mono<UserDto> getSingleUser(@PathVariable Long id) {
+        return Mono.just(userService.readSingleUser(id));
     }
 
     @GetMapping("/username/{username}")
-    public ResponseEntity<List<GroupDto>> getUsername(@PathVariable String username) {
-        return new ResponseEntity(userService.showUsername(username), HttpStatus.OK);
+    public Mono<UserDto> getUsername(@PathVariable String username) {
+        return Mono.just(userService.showUsername(username));
     }
 
     @GetMapping("/current-username/{username}")
-    public ResponseEntity<UserAverageDto> getCurrentUser(@PathVariable String username) {
-        return new ResponseEntity(userService.readCurrentUser(username), HttpStatus.OK);
+    public Mono<UserAverageDto> getCurrentUser(@PathVariable String username) {
+        return Mono.just(userService.readCurrentUser(username));
     }
 
     @PutMapping

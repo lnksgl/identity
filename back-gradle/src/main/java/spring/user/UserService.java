@@ -33,7 +33,7 @@ public class UserService {
 
     @Cacheable
     public List<UserAverageDto> showAllUsers() {
-        return (userRepository.findAll().stream().map(this::mapFromUserToAverageDto).collect(toList()));
+        return null;//(userRepository.findAll().stream().map(this::mapFromUserToAverageDto).collect(toList()));
     }
 
     @Transactional
@@ -48,27 +48,29 @@ public class UserService {
 
     @Transactional
     public void deleteUser(long id) {
-        userRepository.delete(userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("For id " + id)));
+        //userRepository.delete(userRepository.findById(id));
     }
 
     @Cacheable
-    public User readSingleUser(Long id) {
-        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("For id " + id));
+    public UserDto readSingleUser(Long id) {
+        return null; //mapFromUserToDto(userRepository.findById(id));
     }
 
     @Cacheable
     public UserAverageDto readCurrentUser(String username) {
-        User user = userRepository.findByUsername(username).orElseThrow(() -> new UserNotFoundException("For id " + username));
+        User user = userRepository.findByUsername(username).orElseThrow(() ->
+                new UserNotFoundException("For id " + username));
         return mapFromUserToAverageDto(user);
     }
 
     public boolean checkUsername(String username, String email) {
-        return showUsername(username).isEmpty() && showEmail(email).isEmpty();
+        return showUsername(username) == null && showEmail(email).isEmpty();
     }
 
     @Cacheable
-    public List<UserDto> showUsername(String username) {
-        return usersStream(userRepository.findByUsername(username).stream().collect(Collectors.toList()));
+    public UserDto showUsername(String username) {
+        return mapFromUserToDto(userRepository.findByUsername(username).orElseThrow(() ->
+                new UserNotFoundException("For id " + username)));
     }
 
     @Cacheable
