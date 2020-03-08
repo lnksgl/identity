@@ -16,8 +16,7 @@ public class EnquiryMathOperations {
     public double minEvaluation(List<Enquiry> enquiryList) {
         double[] evaluations = new double[enquiryList.size()];
 
-        for (int i = 0; i < enquiryList.size() - 1; i++) {
-            evaluations[i] = parseEvaluation(enquiryList.get(i).getIdUsers());
+        for (int i = 0; i < enquiryList.size() - 1; i++) { evaluations[i] = parseEvaluation(enquiryList.get(i).getIdUsers());
         }
 
         Arrays.sort(evaluations);

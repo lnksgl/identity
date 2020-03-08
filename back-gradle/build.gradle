@@ -16,9 +16,11 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.2.5.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.4.RELEASE'
 
+    implementation 'io.r2dbc:r2dbc-pool:0.8.1.RELEASE'
     compile group: 'io.r2dbc', name: 'r2dbc-postgresql', version: '0.8.1.RELEASE'
     compile group: 'org.springframework.data', name: 'spring-data-r2dbc', version: '1.0.0.RELEASE'
-    compile group: 'io.r2dbc', name: 'r2dbc-spi', version: '0.8.1.RELEASE'
+
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.10'
 
     compile group: 'io.projectreactor', name: 'reactor-core', version: '3.3.3.RELEASE'
     testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'

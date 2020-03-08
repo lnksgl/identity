@@ -33,7 +33,7 @@ public class UserService {
 
     @Cacheable
     public List<UserAverageDto> showAllUsers() {
-        return null;//(userRepository.findAll().stream().map(this::mapFromUserToAverageDto).collect(toList()));
+        return userRepository.findAll().stream().map(this::mapFromUserToAverageDto).collect(toList());
     }
 
     @Transactional
@@ -48,12 +48,12 @@ public class UserService {
 
     @Transactional
     public void deleteUser(long id) {
-        //userRepository.delete(userRepository.findById(id));
+        userRepository.delete(userRepository.findById(id).get());
     }
 
     @Cacheable
     public UserDto readSingleUser(Long id) {
-        return null; //mapFromUserToDto(userRepository.findById(id));
+        return mapFromUserToDto(userRepository.findById(id).get());
     }
 
     @Cacheable
