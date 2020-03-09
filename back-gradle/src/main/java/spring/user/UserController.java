@@ -3,9 +3,12 @@ package spring.user;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
+import spring.group.GroupDto;
+
+import java.util.List;
 
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -16,28 +19,29 @@ public class UserController {
     UserService userService;
 
     @GetMapping
-    public Flux<UserAverageDto> showAllUsers() {
-        return Flux.fromIterable(userService.showAllUsers());
+    public ResponseEntity<List<UserAverageDto>> showAllUsers() {
+        return new ResponseEntity<>(userService.showAllUsers(), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable Long id) {
+    public ResponseEntity deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public Mono<UserDto> getSingleUser(@PathVariable Long id) {
-        return Mono.just(userService.readSingleUser(id));
+    @GetMapping("{id}")
+    public ResponseEntity<GroupDto> getSingleUser(@PathVariable Long id) {
+        return new ResponseEntity(userService.mapFromUserToDto(userService.readSingleUser(id)), HttpStatus.OK);
     }
 
     @GetMapping("/username/{username}")
-    public Mono<UserDto> getUsername(@PathVariable String username) {
-        return Mono.just(userService.showUsername(username));
+    public ResponseEntity<List<GroupDto>> getUsername(@PathVariable String username) {
+        return new ResponseEntity(userService.showUsername(username), HttpStatus.OK);
     }
 
     @GetMapping("/current-username/{username}")
-    public Mono<UserAverageDto> getCurrentUser(@PathVariable String username) {
-        return Mono.just(userService.readCurrentUser(username));
+    public ResponseEntity<UserAverageDto> getCurrentUser(@PathVariable String username) {
+        return new ResponseEntity(userService.readCurrentUser(username), HttpStatus.OK);
     }
 
     @PutMapping

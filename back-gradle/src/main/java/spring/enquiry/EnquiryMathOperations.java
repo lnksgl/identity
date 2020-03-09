@@ -16,7 +16,8 @@ public class EnquiryMathOperations {
     public double minEvaluation(List<Enquiry> enquiryList) {
         double[] evaluations = new double[enquiryList.size()];
 
-        for (int i = 0; i < enquiryList.size() - 1; i++) { evaluations[i] = parseEvaluation(enquiryList.get(i).getIdUsers());
+        for (int i = 0; i < enquiryList.size() - 1; i++) {
+            evaluations[i] = parseEvaluation(enquiryList.get(i).getIdUsers());
         }
 
         Arrays.sort(evaluations);
@@ -25,7 +26,7 @@ public class EnquiryMathOperations {
     }
 
     public double parseEvaluation(Long id) {
-        return 0;//Double.parseDouble(userRepository.findById(id).get().getScanDocument());
+        return Double.parseDouble(userRepository.findById(id).get().getScanDocument());
     }
 
     public double average(String[] evaluations) {

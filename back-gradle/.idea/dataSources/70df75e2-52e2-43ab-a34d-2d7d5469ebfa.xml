@@ -2,19 +2,19 @@
 <dataSource name="postgres@localhost">
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.17">
     <root id="1">
-      <ServerVersion>10.11</ServerVersion>
-      <StartupTime>1583671636</StartupTime>
+      <ServerVersion>10.10</ServerVersion>
+      <StartupTime>1580801410</StartupTime>
     </root>
-    <database id="2" parent="1" name="identity">
-      <ObjectId>16653</ObjectId>
+    <database id="2" parent="1" name="docman">
+      <ObjectId>16384</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>999</IntrospectionStateNumber>
+      <IntrospectionStateNumber>755</IntrospectionStateNumber>
     </database>
     <database id="3" parent="1" name="postgres">
       <ObjectId>13058</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>996</IntrospectionStateNumber>
+      <IntrospectionStateNumber>754</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="4" parent="1" name="pg_monitor">
@@ -57,7 +57,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>351</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1000</IntrospectionStateNumber>
+      <IntrospectionStateNumber>756</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="13" parent="2" name="btree">
@@ -117,181 +117,122 @@
       <SchemaId>11</SchemaId>
     </extension>
     <sequence id="20" parent="12" name="hibernate_sequence">
-      <ObjectId>16728</ObjectId>
-      <StateNumber>823</StateNumber>
+      <ObjectId>16394</ObjectId>
+      <StateNumber>579</StateNumber>
       <Owner>postgres</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="21" parent="12" name="enquiry">
-      <ObjectId>16891</ObjectId>
+    <table id="21" parent="12" name="post">
+      <ObjectId>16416</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>997</StateNumber>
+      <StateNumber>606</StateNumber>
     </table>
-    <table id="22" parent="12" name="groups">
-      <ObjectId>16785</ObjectId>
+    <table id="22" parent="12" name="users">
+      <ObjectId>16404</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>997</StateNumber>
+      <StateNumber>585</StateNumber>
     </table>
-    <table id="23" parent="12" name="users">
-      <ObjectId>16747</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>997</StateNumber>
-    </table>
-    <column id="24" parent="21" name="id">
+    <column id="23" parent="21" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>997</StateNumber>
+      <StateNumber>606</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="25" parent="21" name="idusers">
+    <column id="24" parent="21" name="content">
       <Position>2</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>997</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>606</StateNumber>
+      <TypeId>25</TypeId>
     </column>
-    <column id="26" parent="21" name="idgroups">
+    <column id="25" parent="21" name="created_on">
       <Position>3</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>997</StateNumber>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="27" parent="21" name="created_on">
-      <Position>4</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>997</StateNumber>
+      <StateNumber>606</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="28" parent="21" name="enquiry_pkey">
-      <ObjectId>16894</ObjectId>
-      <StateNumber>997</StateNumber>
+    <column id="26" parent="21" name="title">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>606</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="27" parent="21" name="updated_on">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>606</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="28" parent="21" name="category">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>606</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="29" parent="21" name="username">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>606</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="30" parent="21" name="post_pkey">
+      <ObjectId>16422</ObjectId>
+      <StateNumber>606</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="29" parent="21" name="enquiry_pkey">
-      <ObjectId>16895</ObjectId>
-      <StateNumber>997</StateNumber>
+    <key id="31" parent="21" name="post_pkey">
+      <ObjectId>16423</ObjectId>
+      <StateNumber>606</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
-      <UnderlyingIndexName>enquiry_pkey</UnderlyingIndexName>
+      <UnderlyingIndexName>post_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="30" parent="21" name="enquiry_users_id_fk">
-      <ObjectId>16896</ObjectId>
-      <StateNumber>997</StateNumber>
-      <ColNames>idusers</ColNames>
-      <RefTableId>16747</RefTableId>
-      <RefColPositions>1</RefColPositions>
-      <RefTableName>users</RefTableName>
-      <RefKeyName>users_pkey</RefKeyName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <foreign-key id="31" parent="21" name="enquiry_groups_id_fk">
-      <ObjectId>16901</ObjectId>
-      <StateNumber>997</StateNumber>
-      <ColNames>idgroups</ColNames>
-      <RefTableId>16785</RefTableId>
-      <RefColPositions>1</RefColPositions>
-      <RefTableName>groups</RefTableName>
-      <RefKeyName>groups_pkey</RefKeyName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
     <column id="32" parent="22" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>851</StateNumber>
+      <StateNumber>585</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="33" parent="22" name="name">
+    <column id="33" parent="22" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>851</StateNumber>
+      <StateNumber>585</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="34" parent="22" name="content">
+    <column id="34" parent="22" name="password">
       <Position>3</Position>
-      <DataType>text|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>851</StateNumber>
-      <TypeId>25</TypeId>
+      <StateNumber>585</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="35" parent="22" name="average">
+    <column id="35" parent="22" name="username">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>851</StateNumber>
-      <DefaultExpression>&apos;0&apos;::character varying</DefaultExpression>
+      <NotNull>1</NotNull>
+      <StateNumber>585</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="36" parent="22" name="groups_pkey">
-      <ObjectId>16792</ObjectId>
-      <StateNumber>851</StateNumber>
+    <index id="36" parent="22" name="users_pkey">
+      <ObjectId>16410</ObjectId>
+      <StateNumber>585</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="37" parent="22" name="groups_pkey">
-      <ObjectId>16793</ObjectId>
-      <StateNumber>851</StateNumber>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>groups_pkey</UnderlyingIndexName>
-    </key>
-    <column id="38" parent="23" name="id">
-      <Position>1</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>831</StateNumber>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="39" parent="23" name="username">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>831</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="40" parent="23" name="email">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>831</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="41" parent="23" name="password">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>831</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="42" parent="23" name="scanuser">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>831</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="43" parent="23" name="scandocument">
-      <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>831</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="44" parent="23" name="users_pkey">
-      <ObjectId>16753</ObjectId>
-      <StateNumber>831</StateNumber>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-      <Primary>1</Primary>
-    </index>
-    <key id="45" parent="23" name="users_pkey">
-      <ObjectId>16754</ObjectId>
-      <StateNumber>831</StateNumber>
+    <key id="37" parent="22" name="users_pkey">
+      <ObjectId>16411</ObjectId>
+      <StateNumber>585</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
