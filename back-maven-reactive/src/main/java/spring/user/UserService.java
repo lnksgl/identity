@@ -33,9 +33,9 @@ public class UserService {
 
     @Transactional
     public void createUser(User user) {
-        userRepository.save(user);
+        userRepository.save(user).subscribe();
         //or
-        userRepository.create(user.getUsername(), user.getEmail(), user.getPassword());
+        //userRepository.create(user.getUsername(), user.getEmail(), user.getPassword());
     }
 
     @Cacheable

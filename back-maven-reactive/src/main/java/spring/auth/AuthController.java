@@ -4,10 +4,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @AllArgsConstructor
@@ -23,8 +20,8 @@ public class AuthController {
         authService.signUp(authRegisterRequest);
     }
 
-    @PostMapping("/login")
-    public Mono<AuthResponse> login(@RequestBody AuthLoginRequest authLoginRequest) {
-        return authService.login(authLoginRequest);
+    @GetMapping("/login")
+    public AuthResponse login(@RequestBody AuthLoginRequest authLoginRequest) {
+        return authService.login(authLoginRequest).block();
     }
 }
