@@ -4,12 +4,8 @@ package spring.enquiry;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
-
-import java.util.List;
 
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)

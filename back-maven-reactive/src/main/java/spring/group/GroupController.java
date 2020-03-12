@@ -3,13 +3,9 @@ package spring.group;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.util.List;
 
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -29,7 +25,7 @@ public class GroupController {
         groupService.updateGroup(groupDto);
     }
 
-    @PutMapping("/name/{name}")
+    @GetMapping("/name/{name}")
     public Mono<GroupDto> getUsernameGroups(@PathVariable String name) {
         return groupService.showNameGroup(name);
     }

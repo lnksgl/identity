@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 @AllArgsConstructor
 public class FlywayConfig {
 
-    private final DatasourceProps datasourceProps;
+    DatasourceProps datasourceProps;
 
     @Bean
     @FlywayDataSource

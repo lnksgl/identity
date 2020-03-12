@@ -26,12 +26,12 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public Mono<UserDto> getSingleUser(@PathVariable Long id) {
+    public Mono<UserAverageDto> getSingleUser(@PathVariable Long id) {
         return userService.readSingleUser(id);
     }
 
     @GetMapping("/username/{username}")
-    public Mono<UserDto> getUsername(@PathVariable String username) {
+    public Mono<UserAverageDto> getUsername(@PathVariable String username) {
         return userService.showUsername(username);
     }
 

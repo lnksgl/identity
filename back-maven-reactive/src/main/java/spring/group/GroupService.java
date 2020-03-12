@@ -3,75 +3,63 @@ package spring.group;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import reactor.core.publisher.MonoOperator;
-import spring.user.User;
-import spring.user.UserDto;
-
-import java.util.List;
-import java.util.Objects;
-
-import static java.util.stream.Collectors.toList;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Service
 @AllArgsConstructor
-@Transactional(readOnly = true)
-@CacheConfig(cacheNames = {"service"})
 public class GroupService {
 
     GroupRepository groupRepository;
     GroupMapper groupMapper;
 
-    @Transactional
     public void createGroup(GroupDto groupDto) {
-        groupRepository.save(mapFromDtoToGroup(groupDto));
+        groupRepository.save(mapFromDtoToGroup(groupDto)).subscribe();
     }
 
-    @Transactional
     public void updateGroup(GroupDto groupDto) {
         groupRepository.updateGroup(groupDto.getName(), groupDto.getContent(), groupDto.getId());
     }
 
-    @Transactional
     public void updateAverage(double average, Long id) {
         groupRepository.updateGroup(String.valueOf(average), id);
     }
 
-    @Cacheable
     public Flux<GroupDto> showAllGroups() {
-        return null;//groupRepository.findAll().map(this::mapFromGroupToDto);
+        return groupRepository.findAll().map(this::mapFromGroupToGroupDto);
     }
 
-    @Transactional
     public void deleteGroup(long id) {
-        groupRepository.deleteById(id);
+        groupRepository.deleteById(id).subscribe();
     }
 
-    @Cacheable
     public Mono<GroupDto> readSingleGroup(Long id) {
         return justGroupDto(groupRepository.findById(id));
     }
 
-    @Cacheable
+    public Mono<Group> readNameGroup(String name) {
+        return groupRepository.findByName(name);
+    }
+
     public Mono<GroupDto> showNameGroup(String name) {
-        return justGroupDto(groupRepository.findByName(name));
+        return justGroupDto(readNameGroup(name));
     }
 
     private Mono<GroupDto> justGroupDto(Mono<Group> group) {
-        return Mono.just(mapFromGroupToDto(group));
+        return Mono.just(mapFromMonoGroupToDto(group));
     }
 
-    private GroupDto mapFromGroupToDto(Mono<Group> group) {
-        return groupMapper.groupToGroupDto(group);
+    public GroupDto mapFromMonoGroupToDto(Mono<Group> group) {
+        return groupMapper.monoGroupToGroupDto(group);
     }
 
     private Group mapFromDtoToGroup(GroupDto group) {
         return groupMapper.dtoToGroup(group);
+    }
+
+    private GroupDto mapFromGroupToGroupDto(Group group) {
+        return groupMapper.groupToGroupDto(group);
     }
 }

@@ -5,8 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -38,6 +36,8 @@ public class AuthService {
             user.setPassword(encodePassword(authRegisterRequest.getPassword()));
             user.setEmail(authRegisterRequest.getEmail());
             userService.createUser(user);
+        } else {
+            System.out.println("false");
         }
     }
 

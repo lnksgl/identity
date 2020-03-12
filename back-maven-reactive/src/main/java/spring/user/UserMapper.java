@@ -9,5 +9,7 @@ import reactor.core.publisher.Mono;
 public interface UserMapper {
     UserDto userToUserDto(Mono<User> user);
 
+    User monoUserToUser(Mono<User> user);
+
     User dtoToUser(UserDto userDto);
 }

@@ -1,0 +1,28 @@
+server:
+  port: 7070
+  http2:
+    enabled: true
+  ssl:
+    key-store: classpath:keystore/keystore.p12
+    key-store-password: usblaster
+    key-store-type: PKCS12
+    key-alias: tomcat
+
+spring:
+  application:
+    name: identity
+  r2dbc:
+    url: r2dbc:pool:postgresql://localhost:5432/identity
+    username: postgres
+    password: postgres
+  profiles:
+    active: native
+
+postgres:
+  datasource:
+    prefix: r2dbc:pool:postgresql://
+    host: localhost
+    port: 5432
+    database: identity
+    username: postgres
+    password: postgres

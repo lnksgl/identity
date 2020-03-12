@@ -2,12 +2,7 @@ package spring.group;
 
 import org.springframework.data.r2dbc.repository.query.Query;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
-import org.springframework.stereotype.Repository;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import spring.user.User;
-
-import java.util.List;
 
 public interface GroupRepository extends ReactiveCrudRepository<Group, Long> {
 

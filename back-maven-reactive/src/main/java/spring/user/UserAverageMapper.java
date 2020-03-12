@@ -10,5 +10,7 @@ public interface UserAverageMapper {
 
     UserAverageDto userToUserDto(User user);
 
-    User dtoToUser(UserAverageDto userAverageDto);
+    User dtoToUser(UserAverageDto user);
+
+    User monoUserAverageToUser(Mono<UserAverageDto> user);
 }
