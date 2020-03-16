@@ -21,20 +21,8 @@ public class GroupService {
         groupRepository.save(mapFromDtoToGroup(groupDto)).subscribe();
     }
 
-    public void updateGroup(GroupDto groupDto) {
-        groupRepository.updateGroup(groupDto.getName(), groupDto.getContent(), groupDto.getId());
-    }
-
-    public void updateAverage(double average, Long id) {
-        groupRepository.updateGroup(String.valueOf(average), id);
-    }
-
-    public Flux<GroupDto> showAllGroups() {
+    public Flux<GroupDto> readAllGroups() {
         return groupRepository.findAll().map(this::mapFromGroupToGroupDto);
-    }
-
-    public void deleteGroup(long id) {
-        groupRepository.deleteById(id).subscribe();
     }
 
     public Mono<GroupDto> readSingleGroup(Long id) {
@@ -45,8 +33,20 @@ public class GroupService {
         return groupRepository.findByName(name);
     }
 
-    public Mono<GroupDto> showNameGroup(String name) {
+    public Mono<GroupDto> readNameGroupDto(String name) {
         return justGroupDto(readNameGroup(name));
+    }
+
+    public void updateGroup(GroupDto groupDto) {
+        groupRepository.updateGroup(groupDto.getName(), groupDto.getContent(), groupDto.getId());
+    }
+
+    public void updateAverage(double average, Long id) {
+        groupRepository.updateGroup(String.valueOf(average), id);
+    }
+
+    public void deleteGroup(long id) {
+        groupRepository.deleteById(id).subscribe();
     }
 
     private Mono<GroupDto> justGroupDto(Mono<Group> group) {

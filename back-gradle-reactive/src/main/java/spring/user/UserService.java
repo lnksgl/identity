@@ -24,8 +24,24 @@ public class UserService {
         userRepository.save(user).subscribe();
     }
 
-    public Flux<UserAverageDto> showAllUsers() {
+    public Flux<UserAverageDto> readAllUsers() {
         return userRepository.findAll().map(this::mapFromUserToAverageDto);
+    }
+
+    public Mono<UserAverageDto> readCurrentUser(String username) {
+        return justUserDto(userRepository.findByUsername(username));
+    }
+
+    public Mono<UserAverageDto> readSingleUser(Long id) {
+        return justUserDto(userRepository.findById(id));
+    }
+
+    public Mono<UserAverageDto> readUsernameUser(String username) {
+        return justUserDto(userRepository.findByUsername(username));
+    }
+
+    public Mono<User> readEmailUser(String email) {
+        return userRepository.findByEmail(email);
     }
 
     public void updateUser(UserAverageDto userAverageDto) {
@@ -41,33 +57,13 @@ public class UserService {
         userRepository.deleteById(id).subscribe();
     }
 
-    public Mono<UserAverageDto> readCurrentUser(String username) {
-        return justUserDto(userRepository.findByUsername(username));
-    }
-
-    public Mono<UserAverageDto> showUsername(String username) {
-        return justUserDto(userRepository.findByUsername(username));
-    }
-
-    public Mono<User> showEmail(String email) {
-        return userRepository.findByEmail(email);
-    }
-
     public boolean checkUsername(String username, String email) {
         return true;
         //showUsername(username) == null && showEmail(email) == null;
     }
 
-    public Mono<UserAverageDto> readSingleUser(Long id) {
-        return justUserDto(userRepository.findById(id));
-    }
-
     private Mono<UserAverageDto> justUserDto(Mono<User> user) {
         return user.map(this::mapFromUserToAverageDto);
-    }
-
-    private Mono<UserAverageDto> justAverageDto(Mono<User> user) {
-        return Mono.just(mapFromMonoUserToAverageDto(user));
     }
 
     private UserDto mapFromUserToDto(Mono<User> user) {

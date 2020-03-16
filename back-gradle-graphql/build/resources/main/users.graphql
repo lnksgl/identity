@@ -1,0 +1,16 @@
+schema{
+    query:Query
+}
+
+type Query{
+    allUsers: [User]
+    user(id: String): User
+}
+
+type User{
+    id: String
+    username:String
+    email:String
+    scanUser:String
+    scanDocument:String
+}

@@ -27,12 +27,12 @@ public class GroupController {
 
     @GetMapping("/name/{name}")
     public Mono<GroupDto> getUsernameGroups(@PathVariable String name) {
-        return groupService.showNameGroup(name);
+        return groupService.readNameGroupDto(name);
     }
 
     @GetMapping
     public Flux<GroupDto> showAllGroups() {
-        return groupService.showAllGroups();
+        return groupService.readAllGroups();
     }
 
     @DeleteMapping("/{id}")

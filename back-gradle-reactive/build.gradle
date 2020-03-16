@@ -25,9 +25,6 @@ dependencies {
     compile group: 'io.r2dbc', name: 'r2dbc-postgresql', version: '0.8.1.RELEASE'
     compile group: 'org.postgresql', name: 'postgresql', version: '42.2.10'
 
-    compileOnly 'org.projectlombok:lombok:1.18.10'
-    annotationProcessor 'org.projectlombok:lombok:1.18.10'
-
     compile group: 'com.zaxxer', name: 'HikariCP', version: '3.4.2'
 
     testCompile group: 'io.projectreactor', name: 'reactor-test', version: '3.3.3.RELEASE'
@@ -35,6 +32,9 @@ dependencies {
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.2.5.RELEASE'
 
     //end r2dbc
+
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
 
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.2.5.RELEASE'
 

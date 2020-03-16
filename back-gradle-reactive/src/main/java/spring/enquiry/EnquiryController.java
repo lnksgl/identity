@@ -27,6 +27,6 @@ public class EnquiryController {
 
     @GetMapping
     public Flux<EnquiryDto> showAllEnquiries() {
-        return enquiryService.showAllEnquiries();
+        return enquiryService.readAllEnquiries();
     }
 }

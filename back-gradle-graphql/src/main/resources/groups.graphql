@@ -1,0 +1,15 @@
+schema{
+    query:Query
+}
+
+type Query{
+    allGroups: [Group]
+    group(id: String): Group
+}
+
+type Group{
+    id: String
+    name:String
+    content:String
+    average:String
+}

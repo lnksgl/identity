@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
-import spring.group.Group;
 import spring.group.GroupDto;
 import spring.group.GroupService;
 import spring.user.User;
@@ -38,6 +37,10 @@ public class EnquiryService {
         enquiryRepository.save(enquiry).subscribe();
     }
 
+    public Flux<EnquiryDto> readAllEnquiries() {
+        return enquiryRepository.findAll().map(this::mapFromEnquiryToDto);
+    }
+
     private boolean checkMinEvaluation(Flux<Enquiry> enquiries) {
         return Objects.requireNonNull(enquiries.count().block()).intValue() > 25;
     }
@@ -46,13 +49,9 @@ public class EnquiryService {
         enquiryRepository.deleteById(id).subscribe();
     }
 
-    public Flux<EnquiryDto> showAllEnquiries() {
-        return enquiryRepository.findAll().map(this::mapFromEnquiryToDto);
-    }
-
     public Enquiry mapFromDtoToEnquiry(EnquiryDto enquiryDto) {
         Enquiry enquiry = new Enquiry();
-        User user = userService.mapFromMonoUserAverageToUser(userService.showUsername(enquiryDto.getUsername()));
+        User user = userService.mapFromMonoUserAverageToUser(userService.readUsernameUser(enquiryDto.getUsername()));
         GroupDto group = groupService.mapFromMonoGroupToDto(groupService.readNameGroup(enquiryDto.getName()));
 
         enquiry.setIdUsers(user.getId());

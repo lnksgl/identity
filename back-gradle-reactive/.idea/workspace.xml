@@ -150,8 +150,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../back-maven-reactive" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../back-gradle-reactive-graphql" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3857024" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -311,10 +311,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="1034" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583922942809" />
-    <state x="684" y="357" width="608" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583753911337">
+    <state x="684" y="357" width="618" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584011845351">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="684" y="357" width="608" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1583753911337" />
+    <state x="684" y="357" width="618" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584011845351" />
     <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1583688044542">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -331,26 +331,26 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583685596620" />
-    <state x="776" y="310" width="907" height="484" key="FileChooserDialogImpl" timestamp="1584010778026">
+    <state x="776" y="310" width="907" height="484" key="FileChooserDialogImpl" timestamp="1584013838125">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="907" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1584010778026" />
-    <state width="1807" height="313" key="GridCell.Tab.0.bottom" timestamp="1584009505183">
+    <state x="776" y="310" width="907" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1584013838125" />
+    <state width="1807" height="200" key="GridCell.Tab.0.bottom" timestamp="1584013844238">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="313" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1584009505183" />
-    <state width="1807" height="313" key="GridCell.Tab.0.center" timestamp="1584009505183">
+    <state width="1807" height="200" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1584013844238" />
+    <state width="1807" height="200" key="GridCell.Tab.0.center" timestamp="1584013844237">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="313" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1584009505183" />
-    <state width="1807" height="313" key="GridCell.Tab.0.left" timestamp="1584009505182">
+    <state width="1807" height="200" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1584013844237" />
+    <state width="1807" height="200" key="GridCell.Tab.0.left" timestamp="1584013844235">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="313" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1584009505182" />
-    <state width="1807" height="313" key="GridCell.Tab.0.right" timestamp="1584009505183">
+    <state width="1807" height="200" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1584013844235" />
+    <state width="1807" height="200" key="GridCell.Tab.0.right" timestamp="1584013844237">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="313" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1584009505183" />
+    <state width="1807" height="200" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1584013844237" />
     <state width="1807" height="328" key="GridCell.Tab.1.bottom" timestamp="1581332221243">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -371,10 +371,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/67.27.1853.1053@67.27.1853.1053" timestamp="1583668040615" />
-    <state x="350" y="58" width="1416" height="845" key="SettingsEditor" timestamp="1583923546010">
+    <state x="350" y="58" width="1416" height="845" key="SettingsEditor" timestamp="1584011395772">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="350" y="58" width="1416" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1583923546010" />
+    <state x="350" y="58" width="1416" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1584011395772" />
     <state x="862" y="434" width="362" height="262" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1583669419505">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

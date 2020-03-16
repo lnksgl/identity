@@ -3,13 +3,9 @@ package spring.user;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.reactivestreams.Publisher;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.time.Duration;
-import java.util.concurrent.Flow;
 
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -21,7 +17,7 @@ public class UserController {
 
     @GetMapping
     public Flux<UserAverageDto> showAllUsers() {
-        return userService.showAllUsers();
+        return userService.readAllUsers();
     }
 
     @DeleteMapping("/{id}")
@@ -36,7 +32,7 @@ public class UserController {
 
     @GetMapping("/username/{username}")
     public Mono<UserAverageDto> getUsername(@PathVariable String username) {
-        return userService.showUsername(username);
+        return userService.readUsernameUser(username);
     }
 
     @GetMapping("/current-username/{username}")
